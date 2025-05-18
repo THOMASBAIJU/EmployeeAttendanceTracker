@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.company.ui.EmployeeDashboardController"
+            stylesheets="@/css/styles.css">
+
+    <top>
+        <HBox styleClass="dashboard-header" spacing="20" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+            <Label fx:id="welcomeLabel" styleClass="header-title"/>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Button text="Logout" styleClass="hyperlink" onAction="#handleLogout"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="20" alignment="CENTER" style="-fx-padding: 30;">
+            <Button text="Mark Today's Attendance"
+                    styleClass="button"
+                    onAction="#handleMarkAttendance"/>
+
+            <Button text="Mark Absent"
+                    styleClass="button"
+                    onAction="#handleMarkAbsent"/>
+
+            <Label fx:id="percentageLabel" styleClass="label-header"/>
+
+            <TableView fx:id="attendanceTable" styleClass="table-view" >
+                <columns>
+                    <TableColumn fx:id="dateColumn" text="Date" styleClass="table-column-header" prefWidth="150"/>
+                    <TableColumn fx:id="statusColumn" text="Status" styleClass="table-column-header" prefWidth="100"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>

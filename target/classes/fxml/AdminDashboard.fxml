@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.company.ui.AdminDashboardController"
+            stylesheets="@/css/styles.css">
+
+    <top>
+        <HBox styleClass="dashboard-header" spacing="20" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+            <Text text="Admin Dashboard" styleClass="header-title"/>
+            <Pane HBox.hgrow="ALWAYS"/>
+            <Button text="Logout" styleClass="hyperlink" onAction="#handleLogout"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="20" style="-fx-padding: 30;">
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <TextField fx:id="nameField" promptText="Manager Name"
+                           styleClass="text-field"/>
+                <TextField fx:id="emailField" promptText="Email"
+                           styleClass="text-field"/>
+                <PasswordField fx:id="passwordField" promptText="Password" styleClass="text-field"/>
+
+                <Button text="Add Manager" styleClass="button"
+                        onAction="#handleAddManager"/>
+            </HBox>
+
+            <TableView fx:id="managersTable" styleClass="table-view">
+                <columns>
+
+                    <TableColumn fx:id="nameColumn" text="Name" styleClass="table-column-header" prefWidth="150"/>
+                    <TableColumn fx:id="emailColumn" text="Email" styleClass="table-column-header" prefWidth="200"/>
+                    <TableColumn fx:id="actionColumn" text="Actions" styleClass="table-column-header" prefWidth="100"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>

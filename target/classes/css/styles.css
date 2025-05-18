@@ -1,0 +1,82 @@
+.root {
+    -fx-font-family: "Segoe UI";
+    -fx-base: #0077B5;
+}
+
+.dashboard-header {
+    -fx-padding: 10 20;
+    -fx-background-color: #0077B5;
+}
+
+.header-title {
+    -fx-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.hyperlink {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-underline: true;
+    -fx-cursor: hand;
+}
+
+.button {
+    -fx-background-color: #0077B5;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-padding: 8 15;
+}
+
+.button:hover {
+    -fx-background-color: #006097;
+}
+
+.text-field, .password-field {
+    -fx-background-radius: 5;
+    -fx-border-color: #e1e9ee;
+    -fx-border-radius: 5;
+    -fx-padding: 5 10;
+}
+
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #e1e9ee;
+    -fx-border-radius: 5;
+    -fx-table-cell-border-color: transparent;
+    -fx-padding: 0;
+    -fx-alignment: CENTER;
+
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f8f9fa;
+}
+
+.table-column-header {
+    -fx-background-color: #0077B5;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.label-header {
+    -fx-text-fill: #0077B5;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.delete-button {
+    -fx-background-color: #d9534f;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-padding: 5 10;
+}
+.table-cell {
+    -fx-alignment: CENTER;
+}
+
+.table-column-header, .table-cell {
+    -fx-alignment: CENTER; /* or CENTER, CENTER-RIGHT */
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.company.ui.LoginController"
+            stylesheets="@/css/styles.css">
+
+    <VBox alignment="CENTER" prefWidth="400" prefHeight="500"
+          style="-fx-background-color: white; -fx-padding: 40;"
+          AnchorPane.topAnchor="50" AnchorPane.bottomAnchor="50"
+          AnchorPane.leftAnchor="50" AnchorPane.rightAnchor="50">
+
+        <Text text="Attendance Tracker"
+              style="-fx-fill: #0077B5; -fx-font-size: 24; -fx-font-weight: bold;"/>
+
+        <VBox spacing="20" prefWidth="300">
+            <TextField fx:id="emailField" promptText="Email"/>
+            <PasswordField fx:id="passwordField" promptText="Password"/>
+
+            <Button text="Login"
+                    style="-fx-background-color: #0077B5; -fx-text-fill: white;"
+                    onAction="#handleLogin"/>
+        </VBox>
+
+    </VBox>
+</AnchorPane>

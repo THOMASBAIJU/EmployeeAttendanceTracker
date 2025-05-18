@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.PasswordField?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.company.ui.ManagerDashboardController"
+            stylesheets="@/css/styles.css">
+
+    <top>
+        <HBox styleClass="dashboard-header" spacing="20" alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+        <Text text="Manager Dashboard" styleClass="header-title"/>
+        <Pane HBox.hgrow="ALWAYS"/>
+            <Button text="Logout" styleClass="hyperlink" onAction="#handleLogout"/>
+        </HBox>
+    </top>
+
+    <center>
+        <AnchorPane>
+            <SplitPane fx:id="splitPane" dividerPositions="0.4" styleClass="split-pane"
+                       AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+                       AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+
+                <VBox spacing="15" style="-fx-padding: 20;" VBox.vgrow="ALWAYS">
+                    <HBox spacing="10" alignment="CENTER_LEFT">
+                        <TextField fx:id="empNameField" promptText="Employee Name" styleClass="text-field"/>
+                        <TextField fx:id="empEmailField" promptText="Email" styleClass="text-field"/>
+                        <PasswordField fx:id="empPasswordField" promptText="Password" styleClass="text-field"/>
+                        <Button text="Add Employee" styleClass="button" onAction="#handleAddEmployee"/>
+                    </HBox>
+
+                    <TableView fx:id="employeesTable" styleClass="table-view" VBox.vgrow="ALWAYS">
+                        <columns>
+                            <TableColumn fx:id="empNameColumn" text="Name" styleClass="table-column-header" prefWidth="150"/>
+                            <TableColumn fx:id="empEmailColumn" text="Email" styleClass="table-column-header" prefWidth="200"/>
+                            <TableColumn fx:id="empPasswordColumn" text="Password" styleClass="table-column-header" prefWidth="150"/>
+                            <TableColumn fx:id="empDeleteColumn" text="Action" styleClass="table-column-header" prefWidth="100"/>
+                        </columns>
+                    </TableView>
+                </VBox>
+
+                <VBox spacing="15" style="-fx-padding: 20;" VBox.vgrow="ALWAYS">
+                    <Label fx:id="percentageLabel" styleClass="label-header"/>
+                    <TableView fx:id="attendanceTable" styleClass="table-view" VBox.vgrow="ALWAYS" >
+                        <columns>
+                            <TableColumn fx:id="employeeNameColumn" text="Employee" styleClass="table-column-header" prefWidth="150"/>
+                            <TableColumn fx:id="dateColumn" text="Date" styleClass="table-column-header" prefWidth="120"/>
+                            <TableColumn fx:id="statusColumn" text="Status" styleClass="table-column-header" prefWidth="100"/>
+                        </columns>
+                    </TableView>
+                </VBox>
+            </SplitPane>
+        </AnchorPane>
+    </center>
+</BorderPane>
