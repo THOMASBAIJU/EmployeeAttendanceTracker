@@ -16,7 +16,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import org.bson.types.ObjectId;
 
 public class ManagerDashboardController {
     @FXML private TextField empNameField;
@@ -29,7 +28,6 @@ public class ManagerDashboardController {
     @FXML private TableColumn<Attendance, String> employeeNameColumn;
     @FXML private TableColumn<Attendance, LocalDate> dateColumn;
     @FXML private TableColumn<Attendance, String> statusColumn;
-    @FXML private Label percentageLabel;
     @FXML private TableColumn<User, String> empPasswordColumn;
     @FXML private TableColumn<User, Void> empDeleteColumn;
 
@@ -146,7 +144,7 @@ public class ManagerDashboardController {
             currentStage.close();
         } catch (IOException e) {
             e.printStackTrace();
-            showAlert("Logout Error", "Failed to load login screen. Make sure Login.fxml is in /resources/ui/");
+            showAlert("Logout Error", "Failed to load login screen. Make sure Login.fxml is in /resources/fxml/");
         }
     }
 }
